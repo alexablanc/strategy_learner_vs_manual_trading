@@ -136,14 +136,14 @@ def save_table_figure(stats_df, filename="stats_table.png"):
 plot_strategy_vs_benchmark(
     bm_norm_in, ms_norm_in,
     title=f"Manual Strategy vs Benchmark — In-Sample ({symbol})",
-    filename="manual_insample.png",
+    filename="images/manual_insample.png",
     trades=ms_trades_in, symbol=symbol
 )
 
 plot_strategy_vs_benchmark(
     bm_norm_out, ms_norm_out,
     title=f"Manual Strategy vs Benchmark — Out-of-Sample ({symbol})",
-    filename="manual_outsample.png",
+    filename="images/manual_outsample.png",
     trades=ms_trades_out, symbol=symbol
 )
 
@@ -165,7 +165,7 @@ stats_in_df = pd.DataFrame({
 
 # Format to 6 digits to the right of the decimal
 stats_in_df = stats_in_df.applymap(lambda x: f"{x:.6f}")
-save_table_figure(stats_in_df, "stats_table_insample.png")
+save_table_figure(stats_in_df, "images/stats_table_insample.png")
 
 #Out-of-Sample Stats Table
 bm_out_cum, bm_out_std, bm_out_mean, bm_out_sharpe = compute_stats(bm_portval_out)
@@ -184,7 +184,7 @@ stats_out_df = pd.DataFrame({
 ])
 
 stats_out_df = stats_out_df.applymap(lambda x: f"{x:.6f}")
-save_table_figure(stats_out_df, "stats_table_outsample.png")
+save_table_figure(stats_out_df, "images/stats_table_outsample.png")
 
 experiment1.run()
 experiment2.run()

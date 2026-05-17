@@ -85,4 +85,4 @@ def run():
         "Number of Trades":  [str(v)     for v in num_trades],
     }).set_index("Impact")
 
-    save_table_figure(results_df, "experiment2_table.png")
+    save_table_figure(results_df, "images/experiment2_table.png")

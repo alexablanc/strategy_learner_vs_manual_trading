@@ -84,12 +84,12 @@ def run():
     plot_experiment1(
         bm_norm_in, ms_norm_in, sl_norm_in,
         title=f"Manual Strategy vs Strategy Learner vs Benchmark — In-Sample ({symbol})",
-        filename="experiment1_insample.png"
+        filename="images/experiment1_insample.png"
     )
 
     # chart 2 : oos
     plot_experiment1(
         bm_norm_out, ms_norm_out, sl_norm_out,
         title=f"Manual Strategy vs Strategy Learner vs Benchmark — Out-of-Sample ({symbol})",
-        filename="experiment1_outsample.png"
+        filename="images/experiment1_outsample.png"
     )
